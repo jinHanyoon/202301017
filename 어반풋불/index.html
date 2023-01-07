@@ -11,6 +11,8 @@
         $(document).ready(function(){
           var current =0;
           var current2 =0; 
+            $('.page04_button li').eq(0).addClass('color')
+
         $('.page01_btns li').click(function(){
         var n = $(this).index()
         console.log(n)
@@ -51,12 +53,29 @@
         }
         
         )
-
-        //page03 시작 //
+        page04()
+        //page04 시작 //
+       function page04(){
         $('.page04_button li').click(function(){
             var n= $(this).index()
             console.log(n)
             move_page04(n)
+            if(n==0){
+                $('.page04_title').text("부산")
+            
+            }else if(n==1
+            ){
+              $  ('.page04_title').text("창원")
+
+            }else if(n==2){
+                $  ('.page04_title').text("김해")
+
+            }else if(n==3){
+                $  ('.page04_title').text("양산")
+
+
+            }
+
 
         function move_page04(n){
             if(current2 ==n)return;
@@ -68,15 +87,20 @@
             nextImg.css({left:'100%'}).stop().animate({left:'0'})
             
             current2 = n;
+            $('.page04_button li').removeClass('color')
+            $('.page04_button li').eq(n).addClass('color')
+
         }
         })
         $('.page04_title').mouseenter(function(){
             $('.page04_title').addClass('move')
             $('.page04_list li').addClass('move')
+          
         })
         $('.page04_se').mouseleave(function(){
             $('.page04_title').removeClass('move')
             $('.page04_list li').removeClass('move')
+            $('.page04_title').text("구장 현황 확인하기")
         })
         $('.page04_content div').hover(function(){
             img = $(this).index()
@@ -89,6 +113,7 @@
         }
         )
 
+
         $('.page05_content div').hover(function(){
             img = $(this).index()
             $('.page05_content img').eq(img).addClass('color')
@@ -100,6 +125,28 @@
         }
         )
 
+        $('.page06_content div').hover(function(){
+            img = $(this).index()
+            $('.page06_content img').eq(img).addClass('color')
+            $('.page06_content figure').eq(img).addClass('move')
+        },function(){
+            $('.page06_content img').removeClass('color')
+            $('.page06_content figure').removeClass('move')
+            
+        }
+        )
+
+        $('.page07_content div').hover(function(){
+            img = $(this).index()
+            $('.page07_content img').eq(img).addClass('color')
+            $('.page07_content figure').eq(img).addClass('move')
+        },function(){
+            $('.page07_content img').removeClass('color')
+            $('.page07_content figure').removeClass('move')
+            
+        }
+        )
+    } 
         // footerline//
 
         footer_hover()
@@ -166,9 +213,11 @@
                 </div>
             </section>
             <section class="page02_se">
-            <video src="/img/section01.mp4" muted autoplay loop></video>
 
                 <div class="page02">
+                <video src="/img/section01.mp4" muted autoplay loop>
+                </video>
+
                     <div class="page02_left">
                         <div class="left_text">
                             <img src="/img/icons8-판매자-계정-40.png">
@@ -221,7 +270,6 @@
 
                     </div>
 
-                
                 </div>
             </section>
             <section class="page03_se">
@@ -285,6 +333,38 @@
                                             <p>어반풋볼파크 사상A</p>
                                         </figure>
                                         </div>
+                                        <div>
+                                            <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202008312322540.jpg">
+                                            <figure>
+                                                <h1>연제풋살장 3층 야외구장 </h1>
+                                                <p><span>10:00</span> </p>
+                                                <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                <P><span>14:00</span></P>
+                                                <p>어반풋볼파크 사상A</p>
+                                            </figure> 
+                                            </div> <div>
+                                                <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202008312322540.jpg">
+                                                <figure>
+                                                    <h1>연제풋살장 3층 야외구장 </h1>
+                                                    <p><span>10:00</span> </p>
+                                                    <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                    <P><span>14:00</span></P>
+                                                    <p>어반풋볼파크 사상A</p>
+                                                </figure>
+                                                </div> <div>
+                                                    <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202008312322540.jpg">
+                                                    <figure>
+                                                        <h1>연제풋살장 3층 야외구장 </h1>
+                                                        <p><span>10:00</span> </p>
+                                                        <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                        <P><span>14:00</span></P>
+                                                        <p>어반풋볼파크 사상A</p>
+                                                    </figure>
+                                                    </div>
+
+
+
+
                             </div>
 
 
@@ -323,18 +403,185 @@
                                             <p>어반풋볼파크 사상A</p>
                                         </figure>
                                         </div>
+                                        <div>
+                                            <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                            <figure>
+                                                <h1>풋볼살롱 반여 [동래인접]</h1>
+                                                <p><span>10:00</span> </p>
+                                                <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                <P><span>14:00</span></P>
+                                                <p>어반풋볼파크 사상A</p>
+                                            </figure>
+                                            </div>       
+                                              <div>
+                                                <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                                <figure>
+                                                    <h1>풋볼살롱 반여 [동래인접]</h1>
+                                                    <p><span>10:00</span> </p>
+                                                    <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                    <P><span>14:00</span></P>
+                                                    <p>어반풋볼파크 사상A</p>
+                                                </figure>
+                                                </div>       
+                                                  <div>
+                                                    <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                                    <figure>
+                                                        <h1>풋볼살롱 반여 [동래인접]</h1>
+                                                        <p><span>10:00</span> </p>
+                                                        <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                        <P><span>14:00</span></P>
+                                                        <p>어반풋볼파크 사상A</p>
+                                                    </figure>
+                                                    </div>
+
+
                             </div>
-
-
                         </li>
+
+                        <li>
+                            <div class="page06_content">
+                                <div>
+                                <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                <figure>
+                                    <h1>풋볼살롱 반여 [동래인접]</h1>
+                                    <p><span>10:00</span> </p>
+                                    <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                    <P><span>14:00</span></P>
+                                    <p>어반풋볼파크 사상A</p>
+                                </figure>
+                                </div>
+                                <div>
+                                    <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202212081650270.jpg">
+                                    <figure>
+                                        <h1>어반풋볼파크 북구A</h1>
+                                        <p><span>10:00</span> </p>
+                                        <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                        <P><span>14:00</span></P>
+                                        <p>어반풋볼파크 사상A</p>
+                                    </figure>
+                                    </div>
+                                    <div>
+                                        <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202008241831460.jpg">
+                                        <figure>
+                                            <h1>연제풋살장 3층 야외구장 </h1>
+                                            <p><span>10:00</span> </p>
+                                            <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                            <P><span>14:00</span></P>
+                                            <p>어반풋볼파크 사상A</p>
+                                        </figure>
+                                        </div>
+                                        <div>
+                                            <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                            <figure>
+                                                <h1>풋볼살롱 반여 [동래인접]</h1>
+                                                <p><span>10:00</span> </p>
+                                                <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                <P><span>14:00</span></P>
+                                                <p>어반풋볼파크 사상A</p>
+                                            </figure>
+                                            </div>       
+                                              <div>
+                                                <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                                <figure>
+                                                    <h1>풋볼살롱 반여 [동래인접]</h1>
+                                                    <p><span>10:00</span> </p>
+                                                    <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                    <P><span>14:00</span></P>
+                                                    <p>어반풋볼파크 사상A</p>
+                                                </figure>
+                                                </div>       
+                                                  <div>
+                                                    <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                                    <figure>
+                                                        <h1>풋볼살롱 반여 [동래인접]</h1>
+                                                        <p><span>10:00</span> </p>
+                                                        <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                        <P><span>14:00</span></P>
+                                                        <p>어반풋볼파크 사상A</p>
+                                                    </figure>
+                                                    </div>
+
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="page07_content">
+                                <div>
+                                <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                <figure>
+                                    <h1>풋볼살롱 반여 [동래인접]</h1>
+                                    <p><span>10:00</span> </p>
+                                    <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                    <P><span>14:00</span></P>
+                                    <p>어반풋볼파크 사상A</p>
+                                </figure>
+                                </div>
+                                <div>
+                                    <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202212081650270.jpg">
+                                    <figure>
+                                        <h1>어반풋볼파크 북구A</h1>
+                                        <p><span>10:00</span> </p>
+                                        <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                        <P><span>14:00</span></P>
+                                        <p>어반풋볼파크 사상A</p>
+                                    </figure>
+                                    </div>
+                                    <div>
+                                        <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202008241831460.jpg">
+                                        <figure>
+                                            <h1>연제풋살장 3층 야외구장 </h1>
+                                            <p><span>10:00</span> </p>
+                                            <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                            <P><span>14:00</span></P>
+                                            <p>어반풋볼파크 사상A</p>
+                                        </figure>
+                                        </div>
+                                        <div>
+                                            <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                            <figure>
+                                                <h1>풋볼살롱 반여 [동래인접]</h1>
+                                                <p><span>10:00</span> </p>
+                                                <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                <P><span>14:00</span></P>
+                                                <p>어반풋볼파크 사상A</p>
+                                            </figure>
+                                            </div>       
+                                              <div>
+                                                <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                                <figure>
+                                                    <h1>풋볼살롱 반여 [동래인접]</h1>
+                                                    <p><span>10:00</span> </p>
+                                                    <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                    <P><span>14:00</span></P>
+                                                    <p>어반풋볼파크 사상A</p>
+                                                </figure>
+                                                </div>       
+                                                  <div>
+                                                    <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                                    <figure>
+                                                        <h1>풋볼살롱 반여 [동래인접]</h1>
+                                                        <p><span>10:00</span> </p>
+                                                        <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                                        <P><span>14:00</span></P>
+                                                        <p>어반풋볼파크 사상A</p>
+                                                    </figure>
+                                                    </div>
+
+
+                            </div>
+                        </li>
+
                     </ul>
                     
 
 
 
                     <ul class="page04_button">
-                        <li></li>
-                        <li></li>
+                        <li>부산</li>
+                        <li>창원</li>
+                        <li>김해</li>
+                        <li>양산</li>
+
 
                     </ul>
                     </div>

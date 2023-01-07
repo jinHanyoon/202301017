@@ -25,7 +25,7 @@ nav{width: 1000px;
     height: 80px;
         float: left;
 }
-
+.page01_se{margin: 10px 0;}
 .page01{width: 100%;
     position: relative;
     height: 800px;
@@ -76,22 +76,29 @@ nav{width: 1000px;
 }
 
 .page02_se{
-    height: 660px;
     
     }
-.page02_se video {
-position: absolute;
-z-index: -10;
-    width: 100%; height: 100%;
-    object-fit: cover;
-}
-.page02{width: 1200px; margin: 0 auto;
+
+.page02{width: 1400px; margin: 0 auto;
         height: 700px;
+        position: relative;
+        
+}
+.page02_se video {
+    position: absolute;
+z-index: -9;
+height: 100%;
+width: 100%;
+object-fit: cover;
+box-shadow: 5px 5px 15px;
+opacity: 0.9;
+
 }
 .page02_left{width: 30%;
         height: 600px;
         margin-top: 25px;
         float: left;
+        margin-left: 30px;
 }
 .page02_left img {margin: 30px;}
 .page02_left p{margin: 10px;}
@@ -149,7 +156,9 @@ z-index: -10;
     color: #f8f8f8;
 }
 
-.page03_se{width: 100%; height: 200px;
+.page03_se{
+    margin: 0;
+    width: 100%; height: 200px;
     border-bottom: 2px solid #ccc;
 
 }
@@ -175,7 +184,7 @@ transition: 1s all;
     margin: 30px 0 10px 0;
 }
 
-.page04_se{width: 100%; height: 700px;
+.page04_se{width: 100%; height: 1200px;
     background: url(/img/grass-gc7b7d57fe_1280.fix.jpg);
     background-size: cover;
     background-position: center;
@@ -183,8 +192,9 @@ transition: 1s all;
 
 
 }
+
 .page04{width: 1200px; margin: 0 auto;
-    height: 700px;
+    height: 1200px;
     position: relative;
     overflow: hidden;
 }
@@ -225,25 +235,60 @@ color: #f8f8f8;
 
 
 }
-.page04_button li{width: 80px; height: 80px;
+.page04_list li:nth-child(3){
+    left: 200%;
+
+}
+.page04_list li:nth-child(4){
+    left: 300%;
+
+}
+
+.page04_button li{width: 150px; height: 80px;
 position: absolute;
 bottom: 10%;
 cursor: pointer;
 display: inline-block;
+left: 60%;
+font-size: 50px;
+margin-left: 20px;
+color: rgb(233, 225, 225);
+text-shadow: 3px 3px 15px  black;
+opacity: 0.2;
 
+
+}
+
+.page04_button li.color{
+    scale: 1.1;
+    opacity: 1;
+    transition: 0.5s all;
 }
 .page04_button li:nth-child(1){
     left: 20%;
-background: url(/img/icons8-셰브론-오른쪽-50\ \(3\).png);
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
 }
 .page04_button li:nth-child(2){
-right: 20%;
-background: url(/img/icons8-셰브론-오른쪽-50\ \(2\).png);
+left: 35%;
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+}
+.page04_button li:nth-child(3){
+    left: 50%;
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+}
+.page04_button li:nth-child(4){
+    left: 65%;
 
 background-size: cover;
 background-position: center;
@@ -251,10 +296,12 @@ background-repeat: no-repeat;
 
 }
 
+
 .page04_content {display: flex;
     width: 100%; height: 700px;
     margin-top: 120px;
     transition: 1s all;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .page04_content > div {
@@ -262,6 +309,7 @@ background-repeat: no-repeat;
     background-color: black;
     width: 350px; height: 350px;
     position: relative;
+    margin-top: 30px;
     box-shadow: 3px 3px 15px black;
 }
 
@@ -291,16 +339,16 @@ background-repeat: no-repeat;
     opacity: 0.3;}
 
 
-/*  */
 .page05_content{
     display: flex;
     width: 100%; height: 700px;
     margin-top: 120px;
-
+    flex-wrap: wrap;
     justify-content: space-between;
 
 }
     .page05_content > div {
+        margin-top: 30px;
 
         background-color: black;
         width: 350px; height: 350px;
@@ -331,7 +379,92 @@ background-repeat: no-repeat;
         transition: 0.5s all;
     
         opacity: 0.3;}
-    
+    /* 06 page */
+        .page06_content{
+            display: flex;
+            width: 100%; height: 700px;
+            margin-top: 120px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        
+        }
+            .page06_content > div {
+                margin-top: 30px;
+        
+                background-color: black;
+                width: 350px; height: 350px;
+                position: relative;
+                box-shadow: 3px 3px 15px black;
+            }
+            
+            .page06_content img{width: 100%; height: 100%;
+            }
+            .page06_content figure{width: 100%;
+                position: absolute;
+                bottom: 0;
+                opacity: 0;
+                color: #f8f8f8;
+                }
+            .page06_content figure.move{
+                opacity: 1;
+                bottom: 30%;
+                transition: 1s all;
+                text-align: center;
+            }
+            .page06_content figure p{margin: 10px;}
+            .page06_content figure span{font-size: 22px;
+                font-weight: 800;
+            
+            }
+            .page06_content img.color{
+                transition: 0.5s all;
+            
+                opacity: 0.3;}
+            
+        /* 07page */
+
+        .page07_content{
+            display: flex;
+            width: 100%; height: 700px;
+            margin-top: 120px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        
+        }
+            .page07_content > div {
+                margin-top: 30px;
+        
+                background-color: black;
+                width: 350px; height: 350px;
+                position: relative;
+                box-shadow: 3px 3px 15px black;
+            }
+            
+            .page07_content img{width: 100%; height: 100%;
+            }
+            .page07_content figure{width: 100%;
+                position: absolute;
+                bottom: 0;
+                opacity: 0;
+                color: #f8f8f8;
+                }
+            .page07_content figure.move{
+                opacity: 1;
+                bottom: 30%;
+                transition: 1s all;
+                text-align: center;
+            }
+            .page07_content figure p{margin: 10px;}
+            .page07_content figure span{font-size: 22px;
+                font-weight: 800;
+            
+            }
+            .page07_content img.color{
+                transition: 0.5s all;
+            
+                opacity: 0.3;}
+            
+
 
 /* footer line */
 
@@ -342,7 +475,7 @@ footer {
   footer video{
     position: absolute;
 z-index: -10;
-    width: 100%; height: 46%;
+    width: 100%; height: 300px;
     object-fit: cover;
   }
   .footer_box {
