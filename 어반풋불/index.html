@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+          var current =0;
+          var current2 =0; 
+        $('.page01_btns li').click(function(){
+        var n = $(this).index()
+        console.log(n)
+        page01_slider(n)
+
+        function page01_slider(n){
+           if(current == n) return;
+           
+           var nowImg = $('.page01_slider li').eq(current);
+           var nextImg = $('.page01_slider li').eq(n);
+
+           nowImg.css({left:'0%'}).stop().animate({left:'100%'})
+           nextImg.css({left:'100%'}).stop().animate({left:'0%'})            
+
+           current =n
+
+        }
+        })
+
+        // page02시작//
+
+        $('.page02_left .left_text').hover(function(){
+            $(this).addClass('color')
+            $('.page02_left .left_text a').addClass('color')
+        },function(){
+            $(this).removeClass('color')
+            $('.page02_left .left_text a').removeClass('color')
+
+        }
+        
+        )
+        $('.page02_list li').hover(function(){
+             var a = $(this).index()
+            $('.page02_list li').eq(a).addClass('color')
+        },function(){
+            $(this).removeClass('color')
+
+        }
+        
+        )
+
+        //page03 시작 //
+        $('.page04_button li').click(function(){
+            var n= $(this).index()
+            console.log(n)
+            move_page04(n)
+
+        function move_page04(n){
+            if(current2 ==n)return;
+            
+            let nowImg = $('.page04_list li').eq(current2);
+            let nextImg = $('.page04_list li').eq(n);
+            
+            nowImg.css({left:'0'}).stop().animate({left:'100%'})
+            nextImg.css({left:'100%'}).stop().animate({left:'0'})
+            
+            current2 = n;
+        }
+        })
+        $('.page04_title').mouseenter(function(){
+            $('.page04_title').addClass('move')
+            $('.page04_list li').addClass('move')
+        })
+        $('.page04_se').mouseleave(function(){
+            $('.page04_title').removeClass('move')
+            $('.page04_list li').removeClass('move')
+        })
+        $('.page04_content div').hover(function(){
+            img = $(this).index()
+            $('.page04_content img').eq(img).addClass('color')
+            $('.page04_content figure').eq(img).addClass('move')
+        },function(){
+            $('.page04_content img').removeClass('color')
+            $('.page04_content figure').removeClass('move')
+            
+        }
+        )
+
+        $('.page05_content div').hover(function(){
+            img = $(this).index()
+            $('.page05_content img').eq(img).addClass('color')
+            $('.page05_content figure').eq(img).addClass('move')
+        },function(){
+            $('.page05_content img').removeClass('color')
+            $('.page05_content figure').removeClass('move')
+            
+        }
+        )
+
+        // footerline//
+
+        footer_hover()
+       $('.footer_content li').hide()
+       function footer_hover(){
+        $('.footer_left h1').hover(function(){
+            $(this).addClass('on')
+        },function(){
+        })
+
+        $('.footer_left h1').hover(function(){
+            $(this).addClass('on')
+            $('.footer_content li').fadeIn(800)
+        },function(){
+            $('.footer_left').removeClass('on')
+        }
+        )
+        $('.footer_content li').hover(function(){
+            $(this).addClass('on')
+        },function(){
+            $('.footer_content li').removeClass('on')
+        })
+        $('.footer_right').mouseleave(function(){
+            $('.footer_content li').fadeOut(200)
+            $('.footer_left h1').removeClass('on')
+        })
+       }
+
+        })
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header_in">
+                <h1 class="logo"><img src="http://www.urbanfootball.co.kr/data/biz_img/home_top.png"></h1>
+                <nav>
+                    <ul class="nav_in">
+                        <li><a href="#">login</a></li>
+                        <li><a href="#">Notice</a></li>
+                        <li><a href="#">종합메뉴</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="page01_se">
+                <div class="page01">
+                    <div class="page01_content">
+                    <ul class="page01_slider">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="page01_button">
+                    <ul class="page01_btns">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+
+                    </ul>
+                </div>
+                </div>
+            </section>
+            <section class="page02_se">
+            <video src="/img/section01.mp4" muted autoplay loop></video>
+
+                <div class="page02">
+                    <div class="page02_left">
+                        <div class="left_text">
+                            <img src="/img/icons8-판매자-계정-40.png">
+                            <p>나의 가장 가까운 구장은 어디일까?</p>
+                            <h1>나의 위치에서</h1>
+                            <h1>가장 가까운 구장 예약까지 </h1>
+                            <a href="#">가까운 구장 확인하기</a>
+                        </div>
+                    </div>
+                    <div class="page02_rihgt">
+                        <ul class="page02_list">
+                            <li>
+                                <div class="right_text">
+                                    <img src="/img/icons8-주식-48.png">
+                                    <p>축구 용병들을 위한</p>
+                                    <p>맞춤형 소셜매치</p>
+                                    <h1>어반풋볼</h1>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="right_text">
+                                    <img src="/img/icons8-피아트-500-48.png">
+                                    <p>풋볼장 대관이 처음이신분들을 위한</p>
+                                    <h1> <a href="#">풋볼장 가이드</a></h1>
+
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="right_text">
+                                    <img src="/img/icons8-검사-트럭-48.png">
+                                    <p>2021 매칭률 96% </p>
+                                    <h1> <a href="#">팀 신청방법!</a></h1>
+
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="right_text">
+                                    <img src="/img/icons8-city-buildings-48.png">
+                                    <p>공지사항</p>
+                                    <p>자주 묻는질문 확인하기</p>
+                                    <h1> <a href="#">URBAN</a></h1>
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                
+                </div>
+            </section>
+            <section class="page03_se">
+                <div class="page03">
+                    <ul class="page03_content">
+                        <li>
+                            <h1>자주 찾는 서비스</h1>
+                        </li>
+                        <li>
+                            <img src="/img/icons8-city-buildings-48.png">
+                            <p>가까운 구장 확인하기</p>
+                        </li>
+                        <li>
+                            <img src="/img/icons8-검사-트럭-48.png">
+                            <p>일정 확인하기</p>
+                        </li>   <li>
+                            <img src="/img/icons8-판매자-계정-40.png">
+                            <p>매칭가능 팀 학인하기</p>
+                        </li>   <li>
+                            <img src="/img/icons8-피아트-500-48.png">
+                            <p>매니저 지원하기</p>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+            <section class="page04_se">
+                <div class="page04">
+                    <h1 class="page04_title">구장 현황 확인하기</h1>
+
+                    <ul class="page04_list">
+                        <li>
+                            <div class="page04_content">
+                                <div>
+                                <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202203110149010.jpg">
+                                <figure>
+                                    <h1>어반풋볼파크 사상 A</h1>
+                                    <p><span>10:00</span> </p>
+                                    <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                    <P><span>14:00</span></P>
+                                    <p>어반풋볼파크 사상A</p>
+                                </figure>
+                                </div>
+                                <div>
+                                    <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202202231940060.jpg">
+                                    <figure>
+                                        <h1>백호풋살파크 만덕</h1>
+                                        <p><span>10:00</span> </p>
+                                        <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                        <P><span>14:00</span></P>
+                                        <p>어반풋볼파크 사상A</p>
+                                    </figure>
+                                    </div>
+                                    <div>
+                                        <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202008312322540.jpg">
+                                        <figure>
+                                            <h1>연제풋살장 3층 야외구장 </h1>
+                                            <p><span>10:00</span> </p>
+                                            <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                            <P><span>14:00</span></P>
+                                            <p>어반풋볼파크 사상A</p>
+                                        </figure>
+                                        </div>
+                            </div>
+
+
+                        </li>
+
+
+                        <li>
+                            <div class="page05_content">
+                                <div>
+                                <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202207201806020.jpg">
+                                <figure>
+                                    <h1>풋볼살롱 반여 [동래인접]</h1>
+                                    <p><span>10:00</span> </p>
+                                    <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                    <P><span>14:00</span></P>
+                                    <p>어반풋볼파크 사상A</p>
+                                </figure>
+                                </div>
+                                <div>
+                                    <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202212081650270.jpg">
+                                    <figure>
+                                        <h1>어반풋볼파크 북구A</h1>
+                                        <p><span>10:00</span> </p>
+                                        <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                        <P><span>14:00</span></P>
+                                        <p>어반풋볼파크 사상A</p>
+                                    </figure>
+                                    </div>
+                                    <div>
+                                        <img src="http://urbanfootball.co.kr/data/goods_img/IMG1_202008241831460.jpg">
+                                        <figure>
+                                            <h1>연제풋살장 3층 야외구장 </h1>
+                                            <p><span>10:00</span> </p>
+                                            <P>어반풋볼파크 사상[오전매치] B구장</P>
+                                            <P><span>14:00</span></P>
+                                            <p>어반풋볼파크 사상A</p>
+                                        </figure>
+                                        </div>
+                            </div>
+
+
+                        </li>
+                    </ul>
+                    
+
+
+
+                    <ul class="page04_button">
+                        <li></li>
+                        <li></li>
+
+                    </ul>
+                    </div>
+
+
+
+                </div>
+            </section>
+            <section class="page05_se">
+                <div class="page05">
+                    
+                </div>
+                
+            </section>
+            
+            <footer>
+                <video src="/img/footer.mp4" muted autoplay loop></video>
+                <div class="footer_box">
+                    <div class="footer_left">
+                        <h1>URBAN FootBall</h1>
+                    </div>
+                    <div class="footer_right">
+                        <ul class="footer_content">
+                            <li>
+                            <h1>URBAN FootBall</h1>
+                                <div class="footer_text">
+                                    <p>상호명:어반풋볼</p>
+                                    <p>대표:조현수</p>
+                                    <p>사업자등록번호:610-47-00646</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h1>individual</h1>
+                                    <div class="footer_text">
+                                        <p>이용약관</p>
+                                        <p>개인정보 취급방침</p>
+                                        <p>개인정보관리책임자 : (urbanfootballofficial@gmail.com)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h1>Information</h1>
+                                        <div class="footer_text">
+                                            <p>부산 사상구 괘감로 37</p>
+                                            <p>제 27동 224호</p>
+                                            <p>대표전화:카카오채널 문의</p>
+                                        </div>
+                                    </li>
+                        </ul>
+        
+                    </div>
+        
+                    
+                </div>
+            </footer>
+
+        </main>
+    </div>
+    
+</body>
+</html>
